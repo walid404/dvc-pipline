@@ -57,8 +57,8 @@ def train_model(X_train, y_train, plot_name='', class_weight=None):
     
     global clf_name
 
-    #clf = LogisticRegression(C=1.5, penalty='l2', random_state=45, max_iter=10000, class_weight=class_weight)
-    clf = RandomForestClassifier(n_estimators=500, max_depth=15, random_state=45, class_weight=class_weight)
+    clf = LogisticRegression(C=1.5, penalty='l2', random_state=45, max_iter=10000, class_weight=class_weight)
+    #clf = RandomForestClassifier(n_estimators=500, max_depth=15, random_state=45, class_weight=class_weight)
 
     clf.fit(X_train, y_train)
     y_pred_train = clf.predict(X_train)
